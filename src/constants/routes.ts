@@ -22,6 +22,8 @@ export enum routes {
   projectSettings = "/settings/project",
   userManagement = "/settings/userManagement",
   rowyRunTest = "/rrTest",
+
+  twitterCallback = "/twitterCallback",
 }
 
 export default routes;

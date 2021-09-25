@@ -8,7 +8,8 @@ type IExtensionType =
   | "slackMessage"
   | "sendgridEmail"
   | "apiCall"
-  | "twilioMessage";
+  | "twilioMessage"
+  | "twitterUpdate";
 
 type IExtensionTrigger = "create" | "update" | "delete";
 
@@ -45,6 +46,7 @@ const extensionTypes: IExtensionType[] = [
   "sendgridEmail",
   "apiCall",
   "twilioMessage",
+  "twitterUpdate",
 ];
 
 const extensionBodyTemplate = {

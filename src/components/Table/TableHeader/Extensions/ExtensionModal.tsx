@@ -33,6 +33,7 @@ import { useConfirmation } from "components/ConfirmationDialog";
 import { useProjectContext } from "contexts/ProjectContext";
 
 import { IExtension, triggerTypes } from "./utils";
+import TwitterSignInButton from "./TwitterSignInButton";
 import { WIKI_LINKS } from "constants/externalLinks";
 
 const additionalVariables = [
@@ -185,6 +186,9 @@ export default function ExtensionModal({
                 disabled
                 helperText="Cannot be changed once created"
               />
+              {extensionObject.type === "twitterUpdate" && (
+                <TwitterSignInButton />
+              )}
             </Grid>
           </Grid>
 

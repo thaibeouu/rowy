@@ -27,6 +27,7 @@ import DeployPage from "pages/Deploy";
 import TestPage from "pages/Test";
 import RowyRunTestPage from "pages/RowyRunTest";
 import PageNotFound from "pages/PageNotFound";
+import TwitterCallback from "pages/TwitterCallback";
 
 import Favicon from "assets/Favicon";
 import "analytics";
@@ -119,10 +120,16 @@ export default function App() {
                             routes.userManagement,
                             routes.impersonatorAuth,
                             routes.rowyRunTest,
+                            routes.twitterCallback,
                           ]}
                           render={() => (
                             <ProjectContextProvider>
                               <Switch>
+                                <Route
+                                  exact
+                                  path={routes.twitterCallback}
+                                  render={() => <TwitterCallback />}
+                                />
                                 <Route
                                   exact
                                   path={routes.impersonatorAuth}
